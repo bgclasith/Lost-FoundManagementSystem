@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#F8FAFC">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:padding="30dp"
+
+        android:gravity="center_vertical">
+
+
+        <!-- Logo -->
+
+        <TextView
+
+            android:layout_width="100dp"
+
+            android:layout_height="100dp"
+
+            android:layout_gravity="center"
+
+            android:gravity="center"
+
+            android:text="🔍"
+
+            android:textSize="55sp"
+
+            android:background="#DBEAFE"/>
+
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="30dp"
+
+            android:text="Welcome Back"
+
+            android:textSize="32sp"
+
+            android:textStyle="bold"
+
+            android:textColor="#111827"/>
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+
+            android:text="Login to find your lost items"
+
+            android:textSize="16sp"
+
+            android:textColor="#6B7280"/>
+
+
+
+        <!-- Email -->
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+
+            android:layout_height="60dp"
+
+            android:layout_marginTop="35dp"
+
+            app:cardCornerRadius="18dp"
+
+            app:cardElevation="3dp">
+
+
+            <EditText
+
+                android:id="@+id/email"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+
+                android:padding="15dp"
+
+                android:hint="📧 Email"
+
+                android:background="@android:color/transparent"
+
+                android:inputType="textEmailAddress"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <!-- Password -->
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+
+            android:layout_height="60dp"
+
+            android:layout_marginTop="15dp"
+
+            app:cardCornerRadius="18dp"
+
+            app:cardElevation="3dp">
+
+
+            <EditText
+
+                android:id="@+id/password"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+
+                android:padding="15dp"
+
+                android:hint="🔒 Password"
+
+                android:background="@android:color/transparent"
+
+                android:inputType="textPassword"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <!-- Login Button -->
+
+        <Button
+
+            android:id="@+id/loginBtn"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="58dp"
+
+            android:layout_marginTop="30dp"
+
+            android:text="Login"
+
+            android:textSize="17sp"
+
+            android:textStyle="bold"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"/>
+
+
+
+        <!-- Register -->
+
+        <TextView
+
+            android:id="@+id/registerText"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+
+            android:layout_marginTop="25dp"
+
+            android:text="Create Account"
+
+            android:textSize="16sp"
+
+            android:textStyle="bold"
+
+            android:textColor="#2563EB"/>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

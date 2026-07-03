@@ -5,26 +5,26 @@
     <item
         android:id="@+id/navDashboard"
         android:title="Dashboard"
-        android:icon="@drawable/ic_dashboard"/>
+        android:icon="@drawable/ic_dashboard" />
 
     <item
         android:id="@+id/navClaims"
         android:title="Claims"
-        android:icon="@drawable/ic_claim"/>
+        android:icon="@drawable/ic_claim" />
 
     <item
         android:id="@+id/navUsers"
         android:title="Users"
-        android:icon="@drawable/ic_user"/>
+        android:icon="@drawable/ic_user" />
 
     <item
         android:id="@+id/navLost"
         android:title="Lost"
-        android:icon="@drawable/ic_search"/>
+        android:icon="@drawable/ic_search" />
 
     <item
         android:id="@+id/navFound"
         android:title="Found"
-        android:icon="@drawable/ic_found"/>
+        android:icon="@drawable/ic_found" />
 
 </menu>

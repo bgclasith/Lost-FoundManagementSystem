@@ -7,6 +7,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2563EB"
+        app:title="Admin Portal"
+        app:titleTextColor="@android:color/white"/>
+
     <FrameLayout
         android:id="@+id/adminContainer"
         android:layout_width="match_parent"

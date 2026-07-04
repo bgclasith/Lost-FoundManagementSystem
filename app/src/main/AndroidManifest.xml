@@ -12,31 +12,47 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LostFoundMyPart">
         <activity
+            android:name=".admin.activities.AdminProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.activities.AdminLostDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.activities.AdminFoundDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.activities.AdminClaimDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.activities.AdminActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.HomeActivity"
             android:exported="true">
-
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
         <activity
             android:name=".activities.ProfileActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".activities.ReportLostItemActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".activities.ReportFoundItemActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
         <activity
             android:name=".activities.MyReportsActivity"
-            android:exported="false"/>
+            android:exported="false" />
     </application>
 
 </manifest>

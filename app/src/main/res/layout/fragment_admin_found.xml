@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:background="#F8FAFC">
+
+
+    <!-- Header -->
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:padding="20dp">
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Found Items"
+
+            android:textSize="26sp"
+
+            android:textStyle="bold"
+
+            android:textColor="#111827"/>
+
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+
+            android:text="Recently reported found items"
+
+            android:textSize="14sp"
+
+            android:textColor="#6B7280"/>
+
+
+    </LinearLayout>
+
+
+
+    <!-- Recycler View Card -->
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="10dp"
+
+        app:cardCornerRadius="25dp"
+        app:cardElevation="6dp">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/recyclerViewFound"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:padding="10dp"
+            android:clipToPadding="false"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

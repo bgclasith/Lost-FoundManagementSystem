@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#F8FAFC">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+
+        android:padding="30dp"
+
+        android:gravity="center_horizontal">
+
+
+
+        <!-- Logo -->
+
+        <TextView
+
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+
+            android:gravity="center"
+
+            android:text="🔍"
+
+            android:textSize="60sp"
+
+            android:background="#DBEAFE"/>
+
+
+
+        <!-- Title -->
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="25dp"
+
+            android:text="Create Account"
+
+            android:textSize="30sp"
+
+            android:textStyle="bold"
+
+            android:textColor="#111827"/>
+
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="6dp"
+
+            android:text="Join Lost &amp; Found community"
+
+            android:textSize="15sp"
+
+            android:textColor="#6B7280"/>
+
+
+
+        <!-- Full Name -->
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            android:layout_marginTop="28dp"
+
+            app:cardCornerRadius="18dp"
+            app:cardElevation="4dp">
+
+
+            <EditText
+
+                android:id="@+id/fullName"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:hint="Full Name"
+
+                android:padding="15dp"
+
+                android:background="@android:color/transparent"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Email -->
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            android:layout_marginTop="15dp"
+
+            app:cardCornerRadius="18dp"
+            app:cardElevation="4dp">
+
+
+            <EditText
+
+                android:id="@+id/email"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:hint="Email"
+
+                android:inputType="textEmailAddress"
+
+                android:padding="15dp"
+
+                android:background="@android:color/transparent"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <!-- Phone -->
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            android:layout_marginTop="15dp"
+
+            app:cardCornerRadius="18dp"
+            app:cardElevation="4dp">
+
+
+            <EditText
+
+                android:id="@+id/phone"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:hint="Phone Number"
+
+                android:inputType="phone"
+
+                android:padding="15dp"
+
+                android:background="@android:color/transparent"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <!-- Password -->
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            android:layout_marginTop="15dp"
+
+            app:cardCornerRadius="18dp"
+            app:cardElevation="4dp">
+
+
+            <EditText
+
+                android:id="@+id/password"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:hint="Password"
+
+                android:inputType="textPassword"
+
+                android:padding="15dp"
+
+                android:background="@android:color/transparent"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <!-- Register Button -->
+
+        <Button
+
+            android:id="@+id/registerBtn"
+
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+
+            android:layout_marginTop="30dp"
+
+            android:text="Create Account"
+
+            android:textSize="16sp"
+
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

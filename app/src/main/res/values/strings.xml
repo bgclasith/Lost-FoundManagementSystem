@@ -7,4 +7,7 @@
     <string name="title_profile">User Profile</string>
     <string name="title_admin">Admin Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="no_items_available">No items available</string>
+    <string name="no_matching_items_found">No matching items found</string>
+    <string name="select_date">Select Date</string>
 </resources>

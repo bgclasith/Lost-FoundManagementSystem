@@ -7,15 +7,15 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "",
+        "mobilesdk_app_id": "1:123456789012:android:1234567890abcdef",
         "android_client_info": {
-          "package_name": ""
+          "package_name": "com.nibm.findit"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": ""
+          "current_key": "AIzaSyFakeKey1234567890abcdefghijklmno"
         }
       ],
       "services": {

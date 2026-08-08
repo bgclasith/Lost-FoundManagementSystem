@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.FindIt" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">@color/accent_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:windowBackground">@color/bg_light</item>
+
+        <item name="textInputStyle">@style/Widget.FindIt.TextInputLayout.OutlinedBox</item>
+        <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Choice</item>
+    </style>
+
+    <style name="Widget.FindIt.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_input_box_stroke</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="hintTextColor">@color/text_input_hint_color</item>
+        <item name="android:textColorHint">@color/text_secondary</item>
+        <item name="startIconTint">@color/text_secondary</item>
+        <item name="endIconTint">@color/text_secondary</item>
+    </style>
+</resources>

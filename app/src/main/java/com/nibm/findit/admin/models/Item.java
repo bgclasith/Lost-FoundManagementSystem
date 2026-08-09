@@ -1,6 +1,6 @@
 package com.nibm.findit.admin.models;
 
-public class Item {
+public class Item implements java.io.Serializable {
     private String id;
     private String userId;
     private String userName;

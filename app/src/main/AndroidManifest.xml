@@ -11,17 +11,25 @@
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.FindIt">
-
+        <activity
+            android:name=".admin.activities.SubmitClaimActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.activities.ItemDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.activities.ItemsByDateActivity"
+            android:exported="false" />
         <activity
             android:name=".admin.activities.LoginActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".admin.activities.AdminReportsActivity"
             android:exported="false" />
@@ -42,8 +50,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>

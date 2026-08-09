@@ -12,9 +12,9 @@ public class MyApplication extends Application {
 
         try {
             Map<String, String> config = new HashMap<>();
-            config.put("cloud_name", ""); // TODO: Replace with your cloud name
-            config.put("api_key", ""); // TODO: Replace with your api key
-            config.put("api_secret", "-"); // TODO: Replace with your api secret
+            config.put("cloud_name", "");
+            config.put("api_key", "");
+            config.put("api_secret", "-");
             MediaManager.init(this, config);
         } catch (Exception e) {
             e.printStackTrace();

@@ -15,7 +15,7 @@ public class AdminDashboardActivity extends AppCompatActivity {
 
     private ImageView btnBack;
     private TextView tvStatTotalUsers, tvStatLostItems, tvStatPendingClaims, tvStatRecovered;
-    private Button btnNavManageUsers, btnNavVerifyReports, btnNavManageClaims, btnNavGenerateReports;
+    private Button btnNavManageUsers, btnNavVerifyReports, btnNavManageClaims, btnNavGenerateReports, btnNavItemsByDate;
 
     private FirestoreHelper dbHelper;
 
@@ -36,6 +36,7 @@ public class AdminDashboardActivity extends AppCompatActivity {
         btnNavVerifyReports = findViewById(R.id.btnNavVerifyReports);
         btnNavManageClaims = findViewById(R.id.btnNavManageClaims);
         btnNavGenerateReports = findViewById(R.id.btnNavGenerateReports);
+        btnNavItemsByDate = findViewById(R.id.btnNavItemsByDate);
 
         btnBack.setOnClickListener(v -> finish());
 
@@ -43,6 +44,7 @@ public class AdminDashboardActivity extends AppCompatActivity {
         btnNavVerifyReports.setOnClickListener(v -> startActivity(new Intent(this, VerifyReportsActivity.class)));
         btnNavManageClaims.setOnClickListener(v -> startActivity(new Intent(this, ManageClaimsAdminActivity.class)));
         btnNavGenerateReports.setOnClickListener(v -> startActivity(new Intent(this, AdminReportsActivity.class)));
+        btnNavItemsByDate.setOnClickListener(v -> startActivity(new Intent(this, ItemsByDateActivity.class)));
 
         loadStats();
     }

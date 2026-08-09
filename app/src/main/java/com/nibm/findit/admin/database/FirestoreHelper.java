@@ -45,6 +45,7 @@ public class FirestoreHelper {
         return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(new Date());
     }
 
+    // USER & PROFILE OPERATIONS
 
     public void registerUser(User user, Callback<String> callback) {
         user.setCreatedAt(getCurrentTimestamp());
@@ -56,7 +57,7 @@ public class FirestoreHelper {
         usersRef.add(user)
                 .addOnSuccessListener(documentReference -> {
                     user.setId(documentReference.getId());
-
+                    // Update document with ID
                     documentReference.set(user).addOnSuccessListener(aVoid -> callback.onSuccess(user.getId()));
                 })
                 .addOnFailureListener(callback::onFailure);
@@ -102,6 +103,7 @@ public class FirestoreHelper {
                 .addOnFailureListener(callback::onFailure);
     }
 
+    // ITEM REPORTING & SEARCH
 
     public void insertItem(Item item, Callback<String> callback) {
         item.setCreatedAt(getCurrentTimestamp());
@@ -152,6 +154,7 @@ public class FirestoreHelper {
         itemsRef.document(itemId).get().addOnSuccessListener(snapshot -> {
             Item item = snapshot.toObject(Item.class);
             if (item != null && item.getUserId() != null) {
+                // Populate user name and phone
                 getUserById(item.getUserId(), new Callback<User>() {
                     @Override
                     public void onSuccess(User user) {
@@ -261,6 +264,8 @@ public class FirestoreHelper {
         }
         return items;
     }
+
+    // CLAIMS & NOTIFICATIONS
 
     public void submitClaim(Claim claim, Callback<String> callback) {
         claim.setStatus("PENDING");
@@ -380,6 +385,7 @@ public class FirestoreHelper {
         }
     }
 
+    // Notifications CRUD
     public void addNotification(String userId, String title, String message, String type, Callback<String> callback) {
         NotificationItem n = new NotificationItem();
         n.setUserId(userId);
@@ -432,6 +438,7 @@ public class FirestoreHelper {
                 });
     }
 
+    // ADMIN PANEL & REPORTS
 
     public void getAllUsers(Callback<List<User>> callback) {
         usersRef.get().addOnSuccessListener(snapshots -> callback.onSuccess(snapshots.toObjects(User.class)))
@@ -476,5 +483,18 @@ public class FirestoreHelper {
 
     public void getPendingClaimsCount(Callback<Integer> callback) {
         claimsRef.whereEqualTo("status", "PENDING").get().addOnSuccessListener(s -> callback.onSuccess(s.size()));
+    }
+
+    /**
+     * Returns ALL items (any type/status) that were reported on the given date
+     * (format: yyyy-MM-dd).
+     */
+    public void getItemsByDate(String date, Callback<List<Item>> callback) {
+        itemsRef.whereEqualTo("date", date).get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    List<Item> items = queryDocumentSnapshots.toObjects(Item.class);
+                    populateUsersForItems(items, callback);
+                })
+                .addOnFailureListener(callback::onFailure);
     }
 }

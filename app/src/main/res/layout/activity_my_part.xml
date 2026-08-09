@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Component Testing"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"
+        android:textColor="#333333" />
+
+    <Button
+        android:id="@+id/btnTestSubmitClaim"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Test Submit Claim"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#4CAF50" />
+
+    <Button
+        android:id="@+id/btnTestNotifications"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Test Notifications"
+        android:textSize="16sp"
+        android:backgroundTint="#2196F3" />
+
+</LinearLayout>

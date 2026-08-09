@@ -14,6 +14,7 @@ public class Item implements java.io.Serializable {
     private String status;
     private String imageUri;
     private String createdAt;
+    private String itemName;
 
     public Item() {
     }
@@ -66,11 +67,21 @@ public class Item implements java.io.Serializable {
     }
 
     public String getTitle() {
-        return title;
+        if (title != null && !title.isEmpty()) return title;
+        if (itemName != null && !itemName.isEmpty()) return itemName;
+        return "";
     }
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
     }
 
     public String getDescription() {
